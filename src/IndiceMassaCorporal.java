@@ -1,4 +1,6 @@
-package PACKAGE_NAME;
+public class IndiceMassaCorporal {
 
-public class indiceMassaCorporal {
+    double resultado;
+    double peso;
+    double altura;
 }
