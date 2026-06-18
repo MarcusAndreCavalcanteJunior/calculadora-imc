@@ -1,15 +1,17 @@
 public class CalculadoraImc {
-/*O nome e a classe Paciente estava muito estensa e meio confusa pois o
-* um paciente no mundo real demandaria muitas responsabilidades por isso
-* foi alterado o nome da classe e o metodo que estava com nome estenso
-* e não fazia sentido e na próxima aula aprenderemos a passar parametros
-* para os métodos. Por isso refatoramos essa classe e o metodo
-* IndiceMassaCorporal para calcular pois a classe já tem esse comportamento
-* e assim sendo mais coeso.*/
+
+    /*As variaveis abaixo podem ser usadas aqui fora do metodo ou usadas
+    como parametro dendo do metodo calcular do objeto IndiceMassaCorporal
+    vai depender do contexto isso é o foco dessa aula.
     double peso;
     double altura;
+    Mas tome cuidado caso vc precise por exemplo calcular o IMC de varias
+    pessoas ? Vantagem de usar parâmetros em vez de atributos que vc
+    pode chamar diversas vezes com valores diferentes sem precisar criar
+    novos objetos ou alterar atributos. Esse tipo de dado geralmente vem
+    de algum banco de dados SQL, formularios ou API fica a dica futura.*/
 
-    IndiceMassaCorporal calcular() {
+    IndiceMassaCorporal calcular(double peso,  double altura) {
         IndiceMassaCorporal imc = new IndiceMassaCorporal();
         imc.resultado = peso / (altura * altura);
         imc.peso = peso;
