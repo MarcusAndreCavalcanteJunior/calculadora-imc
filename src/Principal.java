@@ -2,18 +2,17 @@ public class Principal {
 
     public static void main(String[] args) {
         CalculadoraImc calculadoraImc = new CalculadoraImc();
-        /*São da variavel de instacia do CalcularImc iremos passar os parametros
-        abaixo
-        calculadoraImc.altura = 1.85;
-        calculadoraImc.peso = 155.0;
-        (1.85, 98) e nesse trecho do código abaixo ele não vai para o código fonte
-        sempre preste atenção de onde ele é e onde esta sendo atribuido.
-        E para não deixar tão poluido com rótulo o normal pe criar as variaveis
-        como faremos abaixo para ele atribuir o valor que informado.*/
-        double peso = 98;
-        double altura = 1.85;
+/*Foi adcionado uma variavel local no metódo main do tipo Paciente
+*e iremos chamar ela joao para não confundir o nome de paciente da
+*CalculadoraImc, mesmo elas podendo ter qualquer nome só para não
+*confundir e referenciamos o objeto criado a variavel joao alteramos
+*a variaveis de instância a atribuimos elas a joao.  */
+        Paciente joao = new Paciente();
 
-        IndiceMassaCorporal imc = calculadoraImc.calcular(peso, altura);
+        joao.peso = 98;
+        joao.altura = 1.85;
+
+        IndiceMassaCorporal imc = calculadoraImc.calcular(joao);
 
         if (imc.estaComObesidade()) {
             System.out.printf("Paciente com altura de %.2f e peso de %.2f" +
