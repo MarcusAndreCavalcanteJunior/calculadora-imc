@@ -11,7 +11,7 @@ como idade e você precisa usá-lo no cálculo.
 Se o método recebesse doublepeso, double altura você teria que alterar
 a assinatura do método para adicionar double idade. Já passando o objeto
 Paciente inteiro, é só usar paciente.idade dentro do método —sem mudar
-nada na assinatura. 💪🎯*/
+nada na assinatura. */
     IndiceMassaCorporal calcular(Paciente paciente) {
         IndiceMassaCorporal imc = new IndiceMassaCorporal();
         imc.resultado = paciente.peso / (paciente.altura * paciente.altura);
